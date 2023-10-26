@@ -13,20 +13,9 @@ public class Person {
     private String pesel;
 
     public Person(String firstName, String lastName, int age, String pesel) {
-        if (!isNameCorrect(firstName)) {
-            throw new NameUndefinedException("First name " + firstName + " is incorrect");
-        }
-        this.firstName = firstName;
-
-        if (!isNameCorrect(lastName)) {
-            throw new NameUndefinedException("Last name " + lastName + " is incorrect");
-        }
-        this.lastName = lastName;
-
-        if (!isAgeCorrect(age)) {
-            throw new IncorrectAgeException("Provided age " + age + " is incorrect.");
-        }
-        this.age = age;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setAge(age);
 
         this.pesel = pesel;
     }
